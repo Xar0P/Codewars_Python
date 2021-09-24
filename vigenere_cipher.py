@@ -48,7 +48,7 @@ class VigenereCipher(object):
                     decrypted += letter
                     i+=1
                 else:
-                    # (index da palavra + index da chave) % tamanho do alfabeto
+                    # (index da palavra - index da chave) % tamanho do alfabeto
                     number = (self.letter_to_index[letter] - self.letter_to_index[self.key[i]]) % len(self.alphabet)
                     # depois de pegar o index da letra, adiciona ela na mensagem final
                     decrypted += self.index_to_letter[number]
