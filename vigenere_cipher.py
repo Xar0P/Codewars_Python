@@ -7,9 +7,9 @@ class VigenereCipher(object):
         self.alphabet = alphabet
         self.letter_to_index = dict(zip(alphabet, range(len(alphabet))))
         self.index_to_letter = dict(zip(range(len(alphabet)), alphabet))
-        
-    
-    def encode(self, message):   
+
+
+    def encode(self, message):
         encrypted = ''
 
         # transformar a mensagem para o tamanho da key
@@ -30,11 +30,11 @@ class VigenereCipher(object):
                     i+=1
 
         return encrypted
-    
+
     def decode(self, message):
         if message.isupper():
             return message
-        
+
         decrypted = ''
 
         # transformar a mensagem para o tamanho da key
